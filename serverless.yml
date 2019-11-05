@@ -22,6 +22,8 @@ custom:
 functions:
   hello:
     handler: src.handler.hello_world
+    layers:
+      - {Ref: PythonRequirementsLambdaLayer}
 
 plugins:
   - serverless-python-requirements
