@@ -1,0 +1,39 @@
+node_modules
+.idea
+.serverless
+.serverless/*
+.coverage
+*.zip
+
+# Mac junk
+.DS_Store
+
+# Not for committing
+bin/.mockimages/
+
+# Distribution / packaging
+.Python
+*.pyc
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Serverless directories
+.serverless
+serverless_sdk
+
+# Notebook stuff
+.ipynb_checkpoints/
+*/.ipynb_check

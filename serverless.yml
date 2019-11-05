@@ -1,0 +1,28 @@
+service: slslayersbug
+
+package:
+  individually: true
+  include:
+    - "!./**"
+    - "./src/**"
+  exclude:
+    - "./**"
+
+provider:
+  name: aws
+  runtime: python3.7
+  region: ap-southeast-2
+  cfnRole: <CFN_ROLE_NAME>
+
+custom:
+  stageEnv: ${opt:stage}
+  pythonRequirements:  # For Python integration
+    layer: false
+
+functions:
+  hello:
+    handler: src.handler.hello_world
+
+plugins:
+  - serverless-python-requirements
+
